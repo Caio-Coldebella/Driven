@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driven Eats</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+    </div>
+    <div class="content">
+        <div class="items">
+            <p>Primeiro, seu prato</p>
+            <div class="mealoptions">
+                <div class="box" onclick="selmeal(this)">
+                    <img src="./assets/xtudo.jpg">
+                    <p class="name">X-Tudo</p>
+                    <p class="description">Hamburger, queijo, presunto e tudo</p>
+                    <p class="price">R$ 15,99</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="selmeal(this)">
+                    <img src="./assets/xbagunca.jpg">
+                    <p class="name">X-Bagunça</p>
+                    <p class="description">Hamburguer, alfaçe, queijo, presunto e calabresa</p>
+                    <p class="price">R$ 13,50</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="selmeal(this)">
+                    <img src="./assets/xegg.jpg">
+                    <p class="name">X-Egg</p>
+                    <p class="description">Hamburguer, ovo, tomate e salada</p>
+                    <p class="price">R$ 13,99</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="selmeal(this)">
+                    <img src="./assets/xxixa.jpg">
+                    <p class="name">X-Xixa</p>
+                    <p class="description">Hamburger, salsicha, queijo, alface e picles</p>
+                    <p class="price">R$ 11,99</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="selmeal(this)">
+                    <img src="./assets/xlove.jpg">
+                    <p class="name">X-Love</p>
+                    <p class="description">Hamburger, bacon, milho, abacaxi e muito amor</p>
+                    <p class="price">R$ 12,50</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <p>Agora, sua bebida</p>
+            <div class="drinks">
+                <div class="box" onclick="seldrink(this)">
+                    <img src="./assets/coca.jpg">
+                    <p class="name">Coca-cola</p>
+                    <p class="description">Coca-cola lata 350ml</p>
+                    <p class="price">R$ 4,99</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="seldrink(this)">
+                    <img src="./assets/guarana.jpg">
+                    <p class="name">Guaraná</p>
+                    <p class="description">Guaraná lata 350ml</p>
+                    <p class="price">R$ 4,50</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="seldrink(this)">
+                    <img src="./assets/itubaina.jpg">
+                    <p class="name">Itubaína</p>
+                    <p class="description">Itubaina lata 350ml</p>
+                    <p class="price">R$ 3,99</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="seldrink(this)">
+                    <img src="./assets/sprite.jpg">
+                    <p class="name">Sprite</p>
+                    <p class="description">Sprite lata 350ml</p>
+                    <p class="price">R$ 5,50</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="seldrink(this)">
+                    <img src="./assets/fantauva.jpg">
+                    <p class="name">Fanta Uva</p>
+                    <p class="description">Fanta uva lata 350ml</p>
+                    <p class="price">R$ 5,25</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <p>Por fim, sua sobremesa</p>
+            <div class="desserts">
+                <div class="box" onclick="seldessert(this)">
+                    <img src="./assets/bolochocolate.jpg">
+                    <p class="name">Bolo de Chocolate</p>
+                    <p class="description">Bolo de chocolate com cobertura de brigadeiro</p>
+                    <p class="price">R$ 10,00</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="seldessert(this)">
+                    <img src="./assets/bolotapioca.jpg">
+                    <p class="name">Bolo de Tapioca</p>
+                    <p class="description">Bolo de tapioca com recheio de leite condensado</p>
+                    <p class="price">R$ 13,00</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="seldessert(this)">
+                    <img src="./assets/pudim.jpg">
+                    <p class="name">Pudim</p>
+                    <p class="description">Delicioso pudim caseiro</p>
+                    <p class="price">R$ 8,50</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="seldessert(this)">
+                    <img src="./assets/sonhovalsa.jpg">
+                    <p class="name">Sonho de Valsa</p>
+                    <p class="description">Unidade de bombom sonho de valsa</p>
+                    <p class="price">R$ 2,50</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+                <div class="box" onclick="seldessert(this)">
+                    <img src="./assets/serenate.jpg">
+                    <p class="name">Serenata do Amor</p>
+                    <p class="description">Unidade de bombom serenata do amor</p>
+                    <p class="price">R$ 2,00</p>
+                    <ion-icon name="checkmark-circle" class="icon hidden"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottombar">
+        <button class="confirmbutton" onclick="order()"><p class="textbar">Selecione os 3 itens para fechar o pedido</p></button>
+    </div>
+    <div class="confirmarea hidden">
+        <div>
+            <p><em>Confirme seu pedido</em></p>
+            <span class="totalmeal"><p class="txt">lorem ipsum</p><p class="prc">25,50</p></span>
+            <span class="totaldrink"><p class="txt">lorem ipsum</p><p class="prc">25,50</p></span>
+            <span class="totaldessert"><p class="txt">lorem ipsum</p><p class="prc">25,50</p></span>
+            <span class="total"><p><em>Total</em></p><p class="prc"><em>R$ 25,50</em></p></span>
+            <button class="allrigth" onclick="confirmorder()"><h1><em>Tudo certo, pode pedir!</em></h1></button>
+            <button class="cancel" onclick="cancelorder()"><p><em>Cancelar</em></p></button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
