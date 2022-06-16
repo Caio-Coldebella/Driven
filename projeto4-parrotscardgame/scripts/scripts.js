@@ -45,14 +45,29 @@ function turn(element){
             break;
     }
 }
-
-function createarray(n){
-    let arr = document.querySelector(".content");
-    arr.innerHTML = "";
-    for(let i=0; i<n; i++){
-    arr.innerHTML += `<div class="card"><img src="./assets/front.png"></div>`;
+function comparador() { 
+	return Math.random() - 0.5; 
+}
+function createarray(nofcards){
+    let content = document.querySelector(".content");
+    content.innerHTML = "";
+    let arr = [`<div class="card bobross front" onclick="turn(this)"><img src="./assets/front.png"></div>`,
+`<div class="card explody front" onclick="turn(this)"><img src="./assets/front.png"></div>`,
+`<div class="card fiesta front" onclick="turn(this)"><img src="./assets/front.png"></div>`,
+`<div class="card metal front" onclick="turn(this)"><img src="./assets/front.png"></div>`,
+`<div class="card revertit front" onclick="turn(this)"><img src="./assets/front.png"></div>`,
+`<div class="card triplets front" onclick="turn(this)"><img src="./assets/front.png"></div>`,
+`<div class="card unicorn front" onclick="turn(this)"><img src="./assets/front.png"></div>`];
+    arr.sort(comparador);
+    let arrcontent = [];
+    for(let i=0; i<nofcards; i++){
+        arrcontent.push(arr[i]);
+        arrcontent.push(arr[i]);
     }
-    console.log(arr);
+    arrcontent.sort(comparador);
+    for(let i=0; i<arrcontent.length;i++){
+        content.innerHTML += arrcontent[i];
+    }
 }
 
 
@@ -62,6 +77,6 @@ function main(){
     while(nofcards < 4 || nofcards > 14 || nofcards%2 === 1){
         nofcards = prompt("Com quantas cartas deseja jogar?\n(Apenas números pares, entre 4 e 14)");
     }
-    //createarray(nofcards);
+    createarray(nofcards/2);
 }
-//main();
+main();
