@@ -109,5 +109,5 @@ function confirmorder(){
         - Sobremesa: ${dessert}
         Total: R$ ${total.replace('.',',')}`)
     let link = "https://wa.me/5569984553060?text=";
-    window.location.replace(link+message);
+    window.open(link+message);
 }
