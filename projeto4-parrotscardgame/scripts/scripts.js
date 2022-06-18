@@ -1,11 +1,34 @@
 let cardsturned = 0;
 let turnedcard = null;
+let attempts = 0;
+let seconds = 0;
+let idInterval;
+function reload(restart){
+    if(restart == "sim"){
+        attempts = 0;
+        turnedcard = null;
+        cardsturned = 0;
+        main();
+    }
+    if(restart == "não"){
+        alert("Obrigado por jogar :)");
+        cardsturned = 2; //impede o usuario de clicar em qualquer carta
+    }
+}
+function verifyendgame(){
+    let element = document.querySelector(".front");
+    if(element == null){
+        clearInterval(idInterval);
+        setTimeout(()=>{alert(`Você ganhou em ${attempts} jogadas e ${seconds} segundos!`);let restart = prompt("Gostaria de reiniciar a partida?\n(sim ou não)");reload(restart);},1000);
+    }
+}
 function play(element){
     if(cardsturned === 1){
         cardsturned ++;
         if(turnedcard.classList.contains(element.classList[1])){
             turnedcard = null;
             cardsturned = 0;
+            verifyendgame();
         }
         else{
             setTimeout(() => {cardsturned = 0; turn(turnedcard); turn(element); turnedcard = null;}, 1000);
@@ -22,6 +45,7 @@ function turn(element){
     if(element.classList[2] == "back"){
         element.classList.remove("back");
         element.classList.add("front");
+        //imagem alterada com um delay de 250ms para suavizar a transicao da carta (giro no eixo y)
         setTimeout(()=>{element.innerHTML = `<img src="./assets/front.png">`;},250);
         return;
     }
@@ -64,6 +88,7 @@ function turn(element){
         default:
             break;
     }
+    attempts ++;
     play(element);
 }
 function comparador() { 
@@ -90,7 +115,13 @@ function createarray(nofcards){
         content.innerHTML += arrcontent[i];
     }
 }
+function clock(){
+    seconds++;
+    document.querySelector(".clock").innerHTML = seconds+"s";
+}
 function main(){
+    seconds = -1;
+    idInterval = setInterval(clock,1000);
     let nofcards = 0;
     while(nofcards < 4 || nofcards > 14 || nofcards%2 === 1){
         nofcards = prompt("Com quantas cartas deseja jogar?\n(Apenas números pares, entre 4 e 14)");
