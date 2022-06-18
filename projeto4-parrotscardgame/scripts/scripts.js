@@ -22,44 +22,44 @@ function turn(element){
     if(element.classList[2] == "back"){
         element.classList.remove("back");
         element.classList.add("front");
-        element.innerHTML = `<img src="./assets/front.png">`;
+        setTimeout(()=>{element.innerHTML = `<img src="./assets/front.png">`;},250);
         return;
     }
     switch (element.classList[1]){
         case "bobross":
             element.classList.remove("front");
             element.classList.add("back");
-            element.innerHTML = `<img src="./assets/bobrossparrot.gif">`;
+            setTimeout(()=>{element.innerHTML = `<img src="./assets/bobrossparrot.gif">`;},250);
             break;
         case "explody":
             element.classList.remove("front");
             element.classList.add("back");
-            element.innerHTML = `<img src="./assets/explodyparrot.gif">`;
+            setTimeout(()=>{element.innerHTML = `<img src="./assets/explodyparrot.gif">`;},250);
             break;
         case "fiesta":
             element.classList.remove("front");
             element.classList.add("back");
-            element.innerHTML = `<img src="./assets/fiestaparrot.gif">`;
+            setTimeout(()=>{element.innerHTML = `<img src="./assets/fiestaparrot.gif">`;},250);
             break;
         case "metal":
             element.classList.remove("front");
             element.classList.add("back");
-            element.innerHTML = `<img src="./assets/metalparrot.gif">`;
+            setTimeout(()=>{element.innerHTML = `<img src="./assets/metalparrot.gif">`;},250);
             break;
         case "revertit":
             element.classList.remove("front");
             element.classList.add("back");
-            element.innerHTML = `<img src="./assets/revertitparrot.gif">`;
+            setTimeout(()=>{element.innerHTML = `<img src="./assets/revertitparrot.gif">`;},250);
             break;
         case "triplets":
             element.classList.remove("front");
             element.classList.add("back");
-            element.innerHTML = `<img src="./assets/tripletsparrot.gif">`;
+            setTimeout(()=>{element.innerHTML = `<img src="./assets/tripletsparrot.gif">`;},250);
             break;
         case "unicorn":
             element.classList.remove("front");
             element.classList.add("back");
-            element.innerHTML = `<img src="./assets/unicornparrot.gif">`;
+            setTimeout(()=>{element.innerHTML = `<img src="./assets/unicornparrot.gif">`;},250);
             break;
         default:
             break;
