@@ -1,4 +1,27 @@
 let user = "";
+
+
+let sendsucess = (sucess) => {
+    console.log("pao")
+    reloadmessages();}
+function sendfail(error){
+    console.log(error.response.status)
+    window.location.reload();}
+function sendmessage(){
+    let message = document.querySelector(".bottombar input");
+    let object = {
+        from: user,
+        to: "Todos",
+        text: message.value,
+        type: "message" // ou "private_message" para o bônus
+    }
+    message.value = "";
+    let promisse = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages",object);
+    promisse.then(sendsucess);
+    promisse.catch(sendfail);
+}
+
+
 function showmessages(messages){
     let msg = "";
     let element = document.querySelector(".content");
@@ -14,25 +37,33 @@ function showmessages(messages){
             <p><span class="time">${message.time} </span><em>${message.from} </em>${message.text}</p>
             </div>`;
         }else if(message.type === "private_message"){
+            if(message.to !== user){
+                continue;
+            }
             msg = `<div class="generalmessage private_message">
             <p><span class="time">${message.time} </span><em>${message.from} </em>reservadamente para <em>${message.to}: </em>${message.text}</p>
             </div>`;
         }
         element.innerHTML += msg;
     }
+    let lastelement = document.querySelectorAll(".generalmessage");
+    lastelement = lastelement[lastelement.length -1];
+    lastelement.scrollIntoView();
 }
-
-let  errormessages = (error) => {login("Digite seu lindo nome");}
-
+let  errormessages = (error) => {
+    console.log(error.response.status)
+    window.location.reload();}
 function reloadmessages(){
  let messages = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
  messages.then(showmessages);
  messages.catch(errormessages);
 }
+
+
 function sucessfullconnection(sucess){
     let statuscode = sucess.status;
     setInterval(()=>{axios.post("https://mock-api.driven.com.br/api/v6/uol/status", {name: user})},5000);
-    reloadmessages();
+    setInterval(()=>{reloadmessages();},3000);
 }
 function failedconnection(fail){
     let statuscode = fail.response.status;
@@ -43,6 +74,8 @@ function createConexion(user){
     promess.then(sucessfullconnection);
     promess.catch(failedconnection);
 }
+
+
 function login(str){
     user = prompt(str);
     createConexion(user);
