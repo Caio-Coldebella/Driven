@@ -34,6 +34,36 @@
     row-gap: 4px;
     background-color: #F3F3F3;
 }
+.generalmessage{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+    line-height: 10px;
+    padding: 13px 10px 13px 10px;
+    border-radius: 2px;
+}
+.message{
+    background-color: #FFFFFF;
+}
+.status{
+    background-color: #DCDCDC;
+}
+.private_message{
+    background-color: #FFDEDE;
+}
+.generalmessage p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: black;
+}
+.time{
+    font-weight: lighter;
+    color: #AAAAAA;
+}
+.generalmessage em{
+    font-weight: bold;
+}
 .bottombar{
     display: flex;
     align-items: center;
