@@ -8,6 +8,7 @@ function reload(restart){
         attempts = 0;
         turnedcard = null;
         cardsturned = 0;
+        console.log("reiniciando");
         main();
     }
     if(restart == "não"){
