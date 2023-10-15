@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    font-size: 36px;
+    font-family: 'Righteous', cursive;
+    color: #FFFFFF;
+    margin: 30px 0 40px 0;
+}
+ion-icon{
+    width: 23px;
+    height: 23px;
+}
+span{
+    font-family:sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}

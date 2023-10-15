@@ -1,0 +1,30 @@
+.zap{
+    background-color: #2fbe34;
+}
+.naolembro{
+    background-color: #FF3030;
+}
+.quase{
+    background-color: #ff922e;
+}
+ion-icon[name=close-circle]{
+    color: #FF3030;
+}
+ion-icon[name=help-circle]{
+    color: #ff922e;
+}
+ion-icon[name=checkmark-circle]{
+    color: #2fbe34;
+}
+.naolembrop{
+    text-decoration: line-through;
+    color: #FF3030;
+}
+.quasep{
+    text-decoration: line-through;
+    color: #ff922e;
+}
+.zapp{
+    text-decoration: line-through;
+    color: #2fbe34;
+}

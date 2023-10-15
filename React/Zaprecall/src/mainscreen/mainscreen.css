@@ -1,0 +1,43 @@
+.mainscreen{
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin-bottom: 70px;
+    background-color: #FB6B6B;
+}
+.toplogo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    width: 256px;
+    margin: 40px 0 50px 0;
+}
+.toplogo img{
+    width: 52px;
+    height: 60px;
+}
+.bottombar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 70px;
+    width: 100vw;
+    padding: 10px 0 5px 0;
+    background-color: #FFFFFF;
+}
+.bottombar p{
+    font-family: 'Courier New';
+    font-size: 18px;
+}
+.extended{
+    height: 170px;
+}
