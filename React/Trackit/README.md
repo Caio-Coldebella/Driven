@@ -1,15 +1,18 @@
 # TrackIt
 
-## Descrição:
-A aplicação, criada com React, é um site de gerenciamento de hábitos e atividades semanais, e utiliza uma API externa, neste repositório está disponível o link do deploy da aplicação. </br>
-Ao entrar no site o usuário precisa realizar login ou criar sua conta, após isso na tela seguinte estão apresentados os hábitos do dia, que o usuário pode marcar se foram ou não realizados. Para cada hábito há uma msrcação com a sequência atual de dias seguidos que ele realizou a atividade e o maior recorde global. Para cada hábito assinalado uma barra de progresso circular é aumentada em porcentagem de hábitos do dia concluídos. Há também a tela de meus hábitos, em que estão mostrados todos os hábitos cadastrados do usuário e aonde é possível criar novos.
+[Check out the deploy](https://projeto10-trackit-8mo05rt15-caio-coldebella.vercel.app/)
 
-# ZapRecall
+## Description:
+<p>The application was created with React and is a website for managing weekly habits and activities, and uses an external API. The application's deployment link is available in this repository. </br>
+When entering the website, the user needs to log in or create their account, after which the following screen shows the habits of the day, which the user can mark whether or not they were carried out. For each habit there is a message with the current sequence of consecutive days that he performed the activity and the highest global record. For each checked habit, a circular progress bar increases in percentage of the day's habits completed. There is also the my habits screen, where all the user's registered habits are shown and where it is possible to create new ones.</p>
 
-## Discription:
-<p>This project was created with React and is a memorization application, in which there are two selectable decks of cards, with eight cards each, in which the questions asked by him must be answered, and marked "zap" if the question is remembered, in the time, "I almost didn't remember" or "I didn't remember", these two cards have their information stored in the Front-end code itself, so there is no communication with the Back-end or database. See the program's Vercell deployment</p>
-
-![Layout](./layout/Layout.png)
+![Layout](./layout/tela1.png)
+![Layout](./layout/tela2.png)
+![Layout](./layout/tela3.png)
+![Layout](./layout/tela4.png)
+![Layout](./layout/tela5.png)
+![Layout](./layout/tela6.png)
+![Layout](./layout/tela7.png)
 
 # Getting Started with Create React App
 
