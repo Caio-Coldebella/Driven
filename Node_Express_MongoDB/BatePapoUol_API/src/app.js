@@ -3,18 +3,12 @@ import dotenv from 'dotenv';
 import joi from 'joi';
 import cors from 'cors';
 import dayjs from 'dayjs';
-import { MongoClient, ObjectId } from 'mongodb';
+import { ObjectId } from 'mongodb';
+import db from './db.js';
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-dotenv.config();
-
-const mongoClient = new MongoClient(process.env.MONGO_URI);
-let db;
-mongoClient.connect(() => {
-  db = mongoClient.db("batepapouol");
-});
 
 setInterval(removeinative,15000);
 
