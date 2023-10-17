@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+  
+    <title>Buzz Quizz</title>
+</head>
+<body>
+    <div class="topo">
+        <h1 onclick="window.location.reload();">BuzzQuizz</h1>
+    </div>
+    <div class="telaLoading escondido"><div class="loadingio-spinner-spinner-e3up0c2lne"><div class="ldio-3f4blomfbb5">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div></div><h1>Carregando</h1></div>
+     <div class="conteudoTela_1"><!-- add .escondido quando chamar tela 2,3 e criacao de Quizz -->
+        <div class="blocoQuizzes"><!-- add .escondido se usuário já tem quizzes-->
+            <div class="caixaCriarQuizz">
+                <p>Você não criou nenhum quizz ainda :(</p>
+                <button onclick="openTela('conteudoTela_1','conteudoTela_3');">Criar Quizz</button>
+            </div>
+        </div>
+        <div class="seusQuizzes"><!-- add .escondido enqaunto a lista de quizzes do usuário esta vazia-->
+            <div class="subtituloBotao">
+                <h2>Seus os Quizzes</h2><ion-icon onclick="openTela('conteudoTela_1','conteudoTela_3');" name="add-circle"></ion-icon>
+            </div>  
+            <div class="blocoQuizzes">
+            </div>
+        </div>
+        <h2>Todos os Quizzes</h2>
+        <div class="todosQuizzes">
+            <div class="blocoQuizzes">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="conteudoTela_2 escondido"></div>
+    
+
+    <div class="conteudoTela_3 escondido">
+        <p>Comece pelo começo</p>
+        <div class="informacoesdoquizz">
+            <input type="text" placeholder="Título do seu quizz">
+            <input type="text" placeholder="URL da imagem do seu quizz">
+            <input type="text" placeholder="Quantidade de perguntas do quizz">
+            <input type="text" placeholder="Quantidade de níveis do quizz">
+        </div>
+        <button onclick="inseririnfobasicas()">Prosseguir pra criar perguntas</button>
+    </div>
+    <div class="conteudoTela_3 escondido">
+        <p>Crie suas perguntas</p>
+        <div class="boxcriacaoperguntas"></div>
+        <button onclick="criarperguntas()">Prosseguir para criar níveis</button>
+    </div>
+    <div class="conteudoTela_3 escondido">
+        <p>Agora, decida os níveis</p>
+        <div class="boxcriacaoniveis">
+        </div>
+        <button onclick="finalizarquizz()">Finalizar Quizz</button>
+    </div>
+    <div class="conteudoTela_3 escondido">
+        <p>Seu quizz está pronto!</p>
+        <div class="caixaimgcriacao">
+            <img src="">
+            <p>titulo</p>
+        </div>
+        <img src="">
+        <button onclick="acessarquizzcriado()">Acessar Quizz</button>
+        <a onclick="voltarparahome()">Voltar para home</a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="JavaScript/scriptP2.js"></script>
+    <script src="JavaScript/scriptP1.js"></script>
+    <script src="JavaScript/scriptP3.js"></script>
+
+</body>
+</html>
