@@ -1,8 +1,7 @@
 # MyMoviesList
 
 ## Project overview:
-<p>The project is a basic code made with the aim of practicing TypeScript, and is basically an API for a movie organizer, in which the user
-You can create categories for movie, streaming service categories, and movies. Entities are structured as follows:<p>
+<p>The project is a basic code made with the aim of practicing TypeScript, and is basically an API for a movie organizer, in which the user can create categories for movie, streaming service categories, and movies. The acess to database was made using Prisma. Entities are structured as follows:<p>
 
 #### Platform:
 
