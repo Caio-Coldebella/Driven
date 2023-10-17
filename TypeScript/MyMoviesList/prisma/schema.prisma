@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model genre {
+  id    Int     @id @default(autoincrement())
+  name  String  @db.VarChar(50)
+  movie movie[]
+}
+
+model movie {
+  id         Int        @id @default(autoincrement())
+  name       String
+  platformId Int
+  genreId    Int
+  status     statustype @default(N_o_Assistido)
+  review     String?
+  grade      Int?
+  genre      genre      @relation(fields: [genreId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  platform   platform   @relation(fields: [platformId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model platform {
+  id    Int     @id @default(autoincrement())
+  name  String? @db.VarChar(50)
+  movie movie[]
+}
+
+enum statustype {
+  N_o_Assistido @map("Não Assistido")
+  Assistindo
+  Assistido
+}
